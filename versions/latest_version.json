@@ -1,7 +1,7 @@
 {
-    "program_name" : "demo",
+    "program_name" : "jubskleiton_updater",
     "program_extention" : ".exe",
-    "version" : "0.0.1",
-    "version_splited" : [0, 0, 1],
+    "version" : "0.1.0",
+    "version_splited" : [0, 1, 0],
     "url" : "https://raw.githubusercontent.com/Jubskleiton/auto-updater/main/versions/"
 }
