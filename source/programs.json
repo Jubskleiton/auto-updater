@@ -1,8 +1,10 @@
 {
   "programs_urls_and_paths" : [
-    {"url" : "https://raw.githubusercontent.com/Jubskleiton/auto-updater/main/versions/latest_version.json",
+    {
+      "url" : "https://raw.githubusercontent.com/Jubskleiton/auto-updater/main/versions/latest_version.json",
       "path" : "C://Program Files/Jubskleiton/Updater/",
       "program_name" : "jubskleiton_updater",
-      "program_extention" : ".exe"}
+      "program_extention" : ".exe"
+    }
   ]
 }

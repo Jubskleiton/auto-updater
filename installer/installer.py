@@ -7,10 +7,9 @@ def download_handler(url, path):
         # request and download info file
         request.urlretrieve(url, path)
     except Exception as ex:
-        print("can't download {program_name}_latest.json")
+        print(f"download _latest.json error")
         print(f"ERROR: {ex}")
         quit()
-
 
 def do_it():
     if not os.path.exists("C://Program Files/Jubskleion/Updater/programs_info"):
@@ -29,6 +28,14 @@ def do_it():
     with open('C://Program Files/Jubskleiton/Updater/programs.json', 'w') as file:
         to_dump = {"programs_urls_and_paths" : [{"url" : "https://raw.githubusercontent.com/Jubskleiton/auto-updater/main/versions/latest_version.json", "path" : "C://Program Files/Jubskleiton/Updater/", "program_name" : "jubskleiton_updater", "program_extention" : ".exe"}]}
         json.dump(to_dump, file)
+    print("Crating shortcut in desktop")
+    if os.name == 'nt':
+        # for Windows
+        desktop_path = os.path.join(os.environ['USERPROFILE'], 'Desktop')
+    else:
+        # for Unix based systems, including macOS
+        desktop_path = os.path.join(os.environ['HOME'], 'Desktop')
+    os.symlink(f"C://Program Files/Jubskleiton/Updater/{latest['program_name']}-{latest['version']}{latest['program_extention']}", f"{desktop_path}/jubskleiton_updater", target_is_directory=False)
 
 
 if not os.path.exists("C://Program Files/Jubskleion"):

@@ -3,7 +3,6 @@ import json
 
 
 def verify_version(url: str, program_name: str, program_path: str):
-
     download_handler(url, program_name)
 
     # Open the JSON file
@@ -31,7 +30,6 @@ def update(program_dict: dict):
     with open(f"programs_info/{program_dict['program_name']}_latest.json", 'r') as file:
         latest = json.load(file)
     print("Downloading newest .exe file")
-    print(f"{latest['url']}{latest['program_name']}-{latest['version']}{latest['program_extention']}")
     request.urlretrieve(f"{latest['url']}{latest['program_name']}-{latest['version']}{latest['program_extention']}", f"{program_dict['path']}{latest['program_name']}-{latest['version']}{latest['program_extention']}")
     print("updating current.json file")
     with open(f"programs_info/{program_dict['program_name']}.json", 'w') as file:

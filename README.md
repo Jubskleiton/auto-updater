@@ -5,7 +5,7 @@
 
 In the 
 [source/programs.json](https://github.com/Jubskleiton/auto-updater/blob/main/source/programs.json) add the information needed, create a repository with the 
-[latest_version.jason](https://github.com/Jubskleiton/auto-updater/blob/main/versions/latest_version.json) containing the information needed.
+[latest_version.json](https://github.com/Jubskleiton/auto-updater/blob/main/versions/latest_version.json) containing the information needed.
 The information needed is on the readme.md files on the folder os the respective fies
 
 ## The Project
