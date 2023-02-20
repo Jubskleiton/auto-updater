@@ -11,6 +11,7 @@ def download_handler(url, path):
         print(f"ERROR: {ex}")
         quit()
 
+
 def do_it():
     if not os.path.exists("C://Program Files/Jubskleion/Updater/programs_info"):
         os.mkdir("C://Program Files/Jubskleion/Updater/programs_info")
