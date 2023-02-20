@@ -50,3 +50,4 @@ if os.path.exists("C://Program Files/Jubskleiton/Updater"):
 else:
     os.mkdir("C://Program Files/Jubskleiton/Updater")
     do_it()
+    input("Press Enter to close the window")
