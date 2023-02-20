@@ -9,6 +9,7 @@ def download_handler(url, path):
     except Exception as ex:
         print(f"download error")
         print(f"ERROR: {ex}")
+        input("Press Enter to close the window")
         quit()
 
 def do_it():
@@ -50,4 +51,4 @@ if os.path.exists("C://Program Files/Jubskleiton/Updater"):
 else:
     os.mkdir("C://Program Files/Jubskleiton/Updater")
     do_it()
-    input("Press Enter to close the window")
+input("Press Enter to close the window")
